@@ -1,0 +1,7 @@
+DROP USER IF EXISTS db_reader;
+CREATE USER db_reader WITH PASSWORD 'readonly';
+
+DROP DATABASE IF EXISTS data_saver;
+CREATE DATABASE data_saver;
+
+GRANT ALL PRIVILEGES ON DATABASE data_saver TO db_reader;
